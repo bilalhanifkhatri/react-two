@@ -24,7 +24,7 @@ const Home = () => {
     <Box>
       <MyCarousel />
 
-      <Container maxW={'container.xl'} minH={'100vh'} p={16}>
+      <Container maxW={'container.xl'} minH={'fit-content'} p={16}>
         <Heading
           textTransform={'uppercase'}
           py={2}
@@ -38,14 +38,18 @@ const Home = () => {
           p={'4'}
           h={'full'}
           alignItems={'center'}
-          direction={['column', 'row']}
+          direction={['column', 'column', 'column', 'column', 'row']}
         >
-          <Image src={IMG5} h={['40', '400']} filter={'hue-rotate(-130deg)'} />
+          <Image
+            src={IMG5}
+            h={['40', '200', '300', '300', '400']}
+            filter={'hue-rotate(-130deg)'}
+          />
           <Text
             textAlign={'justify'}
-            letterSpacing={["normal",'wider']}
-            lineHeight={['100%', '200%']}
-            padding={['2', '16']}
+            letterSpacing={['normal', 'normal', 'normal', 'normal', 'wider']}
+            lineHeight={['100%', '120%', '150%', '180%', '200%']}
+            padding={['2', '6', '10', '14', '16']}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id
             eum vitae natus quibusdam quasi nesciunt, sit vel esse repudiandae
@@ -77,19 +81,19 @@ const MyCarousel = () => (
     showThumbs={false}
   >
     <Box w={'full'} h={'100vh'}>
-      <Image src={IMG1} />
+      <Image src={IMG1} h={'full'} w={'full'} objectFit={'cover'} />
       <Heading {...headingOptions}>Watch the Future</Heading>
     </Box>
     <Box w={'full'} h={'100vh'}>
-      <Image src={IMG2} />
+      <Image src={IMG2} h={'full'} w={'full'} objectFit={'cover'} />
       <Heading {...headingOptions}>Future is Gaming</Heading>
     </Box>
     <Box w={'full'} h={'100vh'}>
-      <Image src={IMG3} />
+      <Image src={IMG3} h={'full'} w={'full'} objectFit={'cover'} />
       <Heading {...headingOptions}>Gaming on Console</Heading>
     </Box>
     <Box w={'full'} h={'100vh'}>
-      <Image src={IMG4} />
+      <Image src={IMG4} h={'full'} w={'full'} objectFit={'cover'} />
       <Heading {...headingOptions}>Night Life is cool</Heading>
     </Box>
   </Carousel>
